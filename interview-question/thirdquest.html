@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <main>
+        <h1 class="loadingtext">Loading ......</h1>
+        <button class="btn">Loaded content..</button>
+        <span id="result"></span>
+    </main>
+
+
+    <script>
+   
+      const loadingText = document.querySelector('.loadingtext');
+      const btnElem = document.querySelector('.btn');
+      const resultElem = document.querySelector('#result');
+
+      btnElem.addEventListener('click',()=>{
+            // loadingText.style.display = 'none';
+            setTimeout(function(){
+                loadingText.style.visibility = 'hidden';
+          resultElem.innerText = " text has gone"
+            } ,4000)
+          
+      })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>          
+        main{
+            display: flex;
+            flex-direction: column;                
+        }
+
+        .container{
+            border: 3px gray solid;
+            margin: 12px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+       <div id="result"></div>
+      
+    </main>
+    <script>
+       const url = 'https://jsonplaceholder.typicode.com/posts/';
+       const main = document.getElementById('result')
+       let maindata;
+  fetch(url)
+  .then((data) => data.json())
+  .then((data)=> {
+     data.map(data => {
+     maindata+=`<div class="container">
+           <p class="id">${data.id}</p>
+           <p class="title">${data.title}</p>
+           <p class="process">${data.body}</p>
+       </div>`;
+       main.innerHTML = maindata;
+     });
+       
+  });
+  
+
+    </script>
+</body>
+</html>
