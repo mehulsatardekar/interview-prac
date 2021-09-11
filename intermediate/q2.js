@@ -6,14 +6,24 @@
 // * * * *
 // * * * * *
 
-let string;
+// let string;
+// for(let a=5;a>=0;a--){
+
+//   for(let k=0;k<a;k++){
+//       string+=String.fromCharCode(k+65)
+//   }
+//   string+='\n'
+// }
+
+// console.log(string)
+
+
+let string1='';
 for(let a=5;a>=0;a--){
-
-  for(let k=0;k<a;k++){
-      string+=String.fromCharCode(k+65)
+    for(let k=0;k<a;k++){
+        string1+='*'
+    } 
+    string1+='\n'
   }
-  string+='\n'
-}
 
-console.log(string)
-
+console.log(string1)
