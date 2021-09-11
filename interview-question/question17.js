@@ -2,7 +2,6 @@
 //2325, Dwapar. Say if every character in name is worth 35 power points. Write a function
 // which takes two objects and return the person with more power based on their name and power both.
 
-
 const obj1 = {
     name : 'Ram',
     power:'2500',
