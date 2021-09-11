@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <main>
+          <label for="birthyear">Enter Your Birthyear</label>
+          <input  type="date" id="birthyearpicker" />
+
+          <button id="calculatebtn">Calculate Age</button>
+          
+          <h1 class="result"></h1>
+      </main>
+
+    
+      <script>
+
+  const userBirthYear = document.querySelector('#birthyearpicker')
+  const calculateBtn = document.querySelector('#calculatebtn')
+  const resultElem = document.querySelector('.result');
+
+
+
+
+  calculateBtn.addEventListener('click',()=>{
+    let userBirthDate = userBirthYear.value;
+     console.log(userBirthDate.split('-'));
+   let [year,month, day] = [...userBirthDate.split('-')]
+   
+
+   const currentYear = new Date();
+
+   resultElem.innerText = ` Your age is = ${currentYear.getFullYear()-year}`;
+//    const res = userBirthDate.split('-');
+//    console.log(res);
+
+//    const years = res[0];
+
+//    console.log(years);
+
+
+
+   //console.log(year);
+  })
+
+
+      </script>
+</body>
+</html>
