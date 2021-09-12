@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* input{
+             border: 3px red solid;
+         } */
+    </style>
+</head>
+<body>
+    
+    <h1>Password checker app</h1>
+
+    <label for="password" >Enter Password</label>
+     <input type="password" id="password"/>
+
+     <button id="submitpassword">Submit Password</button>
+      <span class="result"></span>
+
+     <script>
+       
+       const passwordInput = document.querySelector('#password');
+       const submitPasswordBtn = document.querySelector('#submitpassword');
+       const resultElem = document.querySelector('.result');
+
+       submitPasswordBtn.disabled = true;
+
+        passwordInput.addEventListener('keyup',()=>{
+            console.log(passwordInput.value)
+
+            let passwordLength = passwordInput.value.length;
+            
+            if(passwordLength == 0){
+                passwordInput.style.border='';
+              submitPasswordBtn.disabled=true;  
+            }else if(passwordLength>10){
+                passwordInput.style.border = '5px green solid';
+                submitPasswordBtn.disabled = false;
+            }else{
+                passwordInput.style.border = '5px red solid';
+                submitPasswordBtn.disabled = true;
+            }
+        })
+     </script>
+</body>
+</html>
