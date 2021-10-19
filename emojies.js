@@ -1,5 +1,3 @@
-'use strict';
-
 const emojies = {
     "😀": "happy",
     "😍": "liked-it",
